@@ -22,4 +22,4 @@ node index.js <owner> <exportRepo> <importRepo> <token>
 ```
 
 ## LICENSE
-[MIT](LICENS)
+[MIT](LICENSE)
