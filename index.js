@@ -22,7 +22,7 @@ const getLabels = async (isExport = true) => {
 };
 
 const deleteLabel = async (delLabels = []) => {
-  delLabels.forEach(async (dl, index) => {
+  delLabels.forEach(async (dl) => {
     const name = dl.name;
     await octokit.request("DELETE /repos/{owner}/{repo}/labels/{name}", {
       owner,
@@ -33,7 +33,7 @@ const deleteLabel = async (delLabels = []) => {
 };
 
 const postLabel = async (registerLabels = []) => {
-  registerLabels.forEach(async (rl, index) => {
+  registerLabels.forEach(async (rl) => {
     const { name, description, color } = rl;
     await octokit.request("POST /repos/{owner}/{repo}/labels", {
       owner,
