@@ -8,6 +8,7 @@ Export the Labels of a repository on GitHub and import them into another reposit
 
 ## Warning
 A large number of labels may exceed the request limit.
+
 https://docs.github.com/en/developers/apps/building-github-apps/rate-limits-for-github-apps
 
 ##  Install
@@ -26,4 +27,4 @@ node index.js <owner> <exportRepo> <importRepo> <token>
 ```
 
 ## LICENSE
-MIT
+[MIT](LICENS)
