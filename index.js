@@ -4,7 +4,7 @@ const argv = process.argv;
 const owner = argv[2];
 const exportRepo = argv[3];
 const importRepo = argv[4];
-const token = argv[6];
+const token = argv[5];
 
 const octokit = new Octokit({
   auth: token,
@@ -26,10 +26,9 @@ const deleteLabel = async (delLabels = []) => {
     const name = dl.name;
     await octokit.request("DELETE /repos/{owner}/{repo}/labels/{name}", {
       owner,
-      repo,
+      repo: importRepo,
       name,
     });
-    console.log(`delete label ${index}/${delLabels.length}`);
   });
 };
 
@@ -43,18 +42,14 @@ const postLabel = async (registerLabels = []) => {
       description,
       color,
     });
-    console.log(`post label ${index}/${registerLabels.length}`);
   });
 };
 
 const main = async () => {
   const delLabels = await getLabels(false);
-  console.log("get delete labels!!");
   await deleteLabel(delLabels);
   const registerLabels = await getLabels(true);
-  console.log("get register labels!!");
   await postLabel(registerLabels);
-  console.log("finish!! Ctrl + c");
 };
 
 main();
