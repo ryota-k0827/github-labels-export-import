@@ -12,13 +12,20 @@ git clone git@github.com:HidakaRintaro/github-labels-export-import.git
 ```
 
 ## Setup
+#### 1. Create a Personal Access Token on GitHub
+#### 2. Create a `.env` file in the root directory
+#### 3. Add the following to the `.env` file
+```env
+GITHUB_ACCESS_TOKEN="YOUR_GITHUB_ACCESS_TOKEN"
+```
+#### 4. Run npm install
 ```bash
 npm install
 ```
 
 ## Usage
 ```bash
-node index.js <owner> <exportRepo> <importRepo> <token>
+node index.js <exportRepoOwner> <exportRepo> <importRepoOwner> <importRepo>
 ```
 
 ## LICENSE
