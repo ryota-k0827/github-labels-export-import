@@ -1,6 +1,8 @@
 # GitHub Labels export import
 forked from [HidakaRintaro/github-labels-export-import](https://github.com/HidakaRintaro/github-labels-export-import)
 
+web app version is [this](https://github.com/ryota-k0827/github-labels-export-import-web)
+
 ## About
 Export the Labels of a repository on GitHub and import them into another repository.
 
