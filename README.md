@@ -11,7 +11,7 @@ Export the Labels of a repository on GitHub and import them into another reposit
 
 ##  Install
 ```bash
-git clone git@github.com:HidakaRintaro/github-labels-export-import.git
+git clone git@github.com:ryota-k0827/github-labels-export-import.git
 ```
 
 ## Setup
